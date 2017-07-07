@@ -13,15 +13,20 @@ $(function(){//文档就绪函数
     }).on("swiperight", function(){
         swipeGuide(0);
     });
+
     setInterval(function(){
         if($(window).scrollTop() <= 1){
             $("#go-top").css('display','none');
         }else{
             $("#go-top").css('display','block');
+
         }
-    },200);
+    });
 
     $("#go-top").on("tap", function(){
+        //if($(window).scrollTop() <= 1){
+        //    return false;
+        //}
         $("body").animate({
             scrollTop : 0
         }, 500);
